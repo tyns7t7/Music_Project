@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 
-def run_data_analysis(file_name):
+def run_data_analysis(music_library):
     print("\n================ PANDAS DATA ANALYSIS ================")
-    df = pd.read_csv(file_name)
+    df = pd.read_csv(music_library)
 
     df["Duration_Sec"] = df["Duration_Sec"].fillna(df["Duration_Sec"].mean())
     df["Rating"] = df["Rating"].fillna(df["Rating"].mean())
